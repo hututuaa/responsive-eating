@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>奶茶加点糖-详情页</title>
+    <link rel="stylesheet" href="../css/newsDetail.css">
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <div class="header-content">
+            <div>
+                <span class="iconfont iconnaichabeizi"></span>
+                <span class="title">奶茶加点糖</span>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="./Home.html">首页</a></li>
+                    <li><a href="./News.html">新闻</a></li>
+                    <li><a href="./About.html">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="returnLogo">
+        <span class="iconfont iconNMStubiao-"></span>
+    </div>
+    <!-- 内容 -->
+    <div class="detail">
+        <div id="detailContent">
+            <h2></h2>
+            <h3></h3>
+            <img src="" alt="" class="foodImg">
+            <p style="padding: 10px;"></p>
+            <p></p>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">
+        <div class="footerContent">
+            <div class="connect">
+                <h4><span class="iconfont icondianhua"></span>联系我们</h4>
+                <ul class="connectDetail">
+                    <li class="iconfont icondizhi">&nbsp;福州市闽侯县上街镇中海寰宇</li>
+                    <li class="iconfont iconyouxiang">&nbsp;hututu@qq.com</li>
+                    <li class="iconfont icondianhua">&nbsp;400-123-4569</li>
+                </ul>
+            </div>
+            <div class="saoma">
+                <h4><span class="iconfont iconsaoma"></span>扫码进店</h4>
+                <span>
+                    <img src="../image/saoma.png" alt="" class="scan" id="scanImg">
+                    <p style="width:80px;text-align: center;margin-top: 10px;">奶茶加点糖</p>
+                </span>
+
+            </div>
+            <div class="notice">
+                <h4><span class="iconfont iconguanzhu1"></span>关注我们</h4>
+                <ul class="foot-subscript">
+                    <li><a href="#"></a></li>
+                    <li><a href="#" id="wx"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul><br>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        var id = parseInt(location.search.split('=')[1]);
+        console.log(id);
+        axios.get('https://mock-api.com/Gzq27OgW.mock/list')
+            .then(function (res) {
+                var resData = res.data[id];
+                console.log(resData)
+                $('#detailContent h2').html(resData.title);
+                // $('#detailContent h3').html(`￥${resData.price}`);
+                $('.foodImg').prop('src', resData.img);
+                $('#detailContent p').eq(0).html(resData.description);
+                $('#detailContent p').eq(1).html(`发布时间:${resData.date}`);
+
+
+
+            }).catch(function (res) {
+                console.log('error', res);
+
+            })
+        // 返回上一个页面
+        function returnNews() {
+            window.history.go(-1)
+        }
+        $('.returnLogo').click(function () {
+            returnNews()
+        })
+    })
+</script>
+</script>
+
+</html>
