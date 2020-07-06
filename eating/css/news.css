@@ -1,16 +1,3 @@
-body, html {
-    min-width: 1200px;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.header {
-    width: 100%;
-    /* height: 100px; */
-    background-color: #ddd;
-}
-
 .header-content {
     width: 1200px;
     display: flex;
@@ -100,67 +87,4 @@ a:hover{
 }
 .newsList a{
     text-decoration: none!important;
-}
-/* 底部 */
-
-.notice .foot-subscript li {
-    float: left;
-    margin-left: 20px;
-    list-style: none;
-}
-
-.notice .foot-subscript li a {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    text-decoration: none;
-}
-
-.notice .foot-subscript li:first-child a {
-    background: url("../image/qq.png") 0 0 no-repeat;
-}
-
-.notice .foot-subscript li:nth-child(2) a {
-    background: url("../image/wx.png") 0 0 no-repeat;
-}
-
-.notice .foot-subscript li:nth-child(3) a {
-    background: url("../image/taobao.png") 0 0 no-repeat;
-}
-
-.notice .foot-subscript li:last-child a {
-    background: url("../image/wblogo.png") 0 0 no-repeat;
-}
-
-.connect h4 .iconfont.icondianhua, .iconfont.iconguanzhu1, .iconfont.iconsaoma {
-    font-size: 25px;
-    margin-right: 5px;
-    color: #1899ff;
-}
-      
-.footer {
-    background-color: #ddd;
-    height: 250px;
-    margin-top: 10px;
-    padding-top: 20px;
-}
-
-.footer .footerContent {
-    width: 1200px;
-    margin: 0 auto;
-    height: 200px;
-    display: flex;
-    justify-content: space-between;
-}
-.footerContent  ul  {
-    padding: 0;
- }
- 
-.footerContent  ul  {
-    padding: 0;
- }
- 
-.connect h4, .saoma h4, .notice h4 {
-    text-align: center;
-    color: #222;
 }

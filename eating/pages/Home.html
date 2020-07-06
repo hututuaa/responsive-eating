@@ -8,25 +8,31 @@
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../font/iconfont.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/common.css">
 </head>
 
 <body>
-    <div class="header">
-        <div class="header-content">
-            <div>
-                <span class="iconfont iconnaichabeizi"></span>
-                <span class="title">奶茶加点糖</span>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="./Home.html">首页</a></li>
-                    <li><a href="./News.html">新闻</a></li>
-                    <li><a href="./About.html">关于我们</a></li>
-                </ul>
-            </div>
+    <!-- 头部导航 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #ddd" id="top">
+        <a class="navbar-brand iconfont iconnaichabeizi logosize"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active-title">
+                    <a class="nav-link" href="./Home.html">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./News.html">新闻</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./About.html">关于我们</a>
+                </li>
+            </ul>
         </div>
-
-    </div>
+    </nav>
     <!-- 轮播图 -->
     <div class="banner">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -40,13 +46,56 @@
             <!-- 轮播图片 -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="../image/banner4.jpg" class="first-image">
+                    <!-- <img src="../image/banner4.jpg" class="first-image"> -->
+                    <img src="../dist/images/banner1-900.jpg" data-original="../dist/images/news/banner1-original.jpg"
+                        data-srcset="
+                    ../dist/images/banner1-90.jpg 90w,
+                    ../dist/images/banner1-180.jpg 180w,
+                    ../dist/images/banner1-360.jpg 360w,
+                    ../dist/images/banner1-540.jpg 540w,
+                    ../dist/images/banner1-720.jpg 720w,
+                    ../dist/images/banner1-900.jpg 900w,
+                    ../dist/images/banner1-1080.jpg 1080w,
+                    ../dist/images/banner1-1296.jpg 1296w,
+                    ../dist/images/banner1-1512.jpg 1512w,
+                    ../dist/images/banner1-1728.jpg 1728w,
+                    ../dist/images/banner1-2048.jpg 2048w,
+                    ../dist/images/banner1-original.jpg
+                    " class="img-fluid lazyload first-image" data-sizes="auto" alt="...">
                 </div>
                 <div class="carousel-item" id="item2">
-                    <img src="../image/banner2.jpg" class="second-image">
+                    <!-- <img src="../image/banner2.jpg" class="second-image"> -->
+                    <img src="../dist/images/banner3-900.jpg" data-original="  ../dist/images/banner3-original.jpg"
+                        data-srcset="
+                ../dist/images/banner3-90.jpg 90w,
+                ../dist/images/banner3-180.jpg 180w,
+                ../dist/images/banner3-360.jpg 360w,
+                ../dist/images/banner3-540.jpg 540w,
+                ../dist/images/banner3-720.jpg 720w,
+                ../dist/images/banner3-900.jpg 900w,
+                ../dist/images/banner3-1080.jpg 1080w,
+                ../dist/images/banner3-1296.jpg 1296w,
+                ../dist/images/banner3-1512.jpg 1512w,
+                ../dist/images/banner3-1728.jpg 1728w,
+                ../dist/images/banner3-2048.jpg 2048w,
+                ../dist/images/banner3-original.jpg
+                " class="img-fluid lazyload second-image" data-sizes="auto" alt="...">
                 </div>
                 <div class="carousel-item" id="item3">
-                    <img src="../image/banner3.jpg" class="third-image">
+                    <!-- <img src="../image/banner3.jpg" class="third-image"> -->
+                    <img src="../dist/images/banner4-900.jpg" data-original="../dist/images/banner4-90.jpg" data-srcset="
+                        ../dist/images/banner4-90.jpg 90w,
+                        ../dist/images/banner4-180.jpg 180w,
+                        ../dist/images/banner4-360.jpg 360w,
+                        ../dist/images/banner4-540.jpg 540w,
+                        ../dist/images/banner4-720.jpg 720w,
+                        ../dist/images/banner4-900.jpg 900w,
+                        ../dist/images/banner4-1080.jpg 1080w,
+                        ../dist/images/banner4-1296.jpg 1296w,
+                        ../dist/images/banner4-1512.jpg 1512w,
+                        ../dist/images/banner4-2048.jpg 2048w,
+                        ../dist/images/banner4-original.jpg
+                " class="img-fluid lazyload third-image" data-sizes="auto" alt="...">
                 </div>
             </div>
 
@@ -66,28 +115,36 @@
     <h3 style="text-align: center;margin: 15px;">良心推荐</h3>
     <div class="container">
         <h4 style="text-align: center;margin: 10px;">美味茶品</h4>
-        <div class="row">
+        <div class="row gutter">
             <div class="col-6 col-sm-6 col-md-3 col-lg-3">
                 <div class="card">
-                    <img src="../image/advice1.jpg" alt="" class="food-img">
+                    <img src="../dist/images/advice1-540.jpg" data-original="../dist/images/advice1-90.jpg" data-srcset=" ../dist/images/advice1-90.jpg 90w,
+                        ../dist/images/advice1-180.jpg 180w,
+                        ../dist/images/advice1-original.jpg" class="img-fluid lazyload" alt="..." data-sizes="auto">
                     <div class="card-body">
                         <p style="text-align: center;margin-top: 10px;font-weight: bold;" class="card-title">
-                            芝芝芒芒</p>
+                            芝芝芒芒
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-3 col-lg-3">
                 <div class="card">
-                    <img src="../image/advice2.jpg" alt="" class="food-img">
+                    <img src="    ../dist/images/advice2-540.jpg" data-original="   ../dist/images/advice2-90.jpg"
+                        data-srcset=" ../dist/images/advice2-90.jpg 90w,
+                        ../dist/images/advice2-180.jpg 180w,
+                        ../dist/images/advice2-original.jpg" class="img-fluid lazyload" alt="..." data-sizes="auto">
                     <div class="card-body">
                         <p style="text-align: center;margin-top:10px;font-weight: bold;" class="card-title">脏脏茶</p>
-
                     </div>
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-3 col-lg-3">
                 <div class="card">
-                    <img src="../image/advice3.jpg" alt="" class="food-img">
+                    <img src="    ../dist/images/advice3-540.jpg" data-original="    ../dist/images/advice3-90.jpg"
+                        data-srcset=" ../dist/images/advice3-90.jpg 90w,
+                        ../dist/images/advice3-180.jpg 180w,
+                        ../dist/images/advice3-original.jpg" class="img-fluid lazyload" alt="..." data-sizes="auto">
                     <div class="card-body">
                         <p style="text-align: center;margin-top: 10px;font-weight: bold;" class="card-title">芝芝莓莓</p>
                     </div>
@@ -95,7 +152,10 @@
             </div>
             <div class="col-6 col-sm-6 col-md-3 col-lg-3">
                 <div class="card">
-                    <img src="../image/advice4.jpg" alt="" class="food-img">
+                    <img src="../dist/images/advice4-540.png" data-original="   ../dist/images/news/advice4-90.png"
+                        data-srcset="../dist/images/advice4-90.png 90w,
+                        ../dist/images/advice4-180.png 180w,
+                        ../dist/images/advice4-original.png" class="img-fluid lazyload" alt="..." data-sizes="auto">
                     <div class="card-body">
                         <p style="text-align: center;margin-top: 10px;font-weight: bold;" class="card-title">盆栽奶茶</p>
                     </div>
@@ -105,10 +165,12 @@
             <!-- </div> -->
         </div>
         <h4 style="text-align: center;margin: 10px;">好吃甜品</h4>
-        <div class="row">
+        <div class="row gutter">
             <div class="col-6 col-sm-6 col-md-3 col-lg-3">
                 <div class="card">
-                    <img src="../image/advice5.jpg" alt="" class="food-img">
+                    <img src="../dist/images/advice5-540.jpg" data-original="../dist/images/advice5-90.jpg" data-srcset=" ../dist/images/advice5-90.jpg 90w,
+                        ../dist/images/advice5-180.jpg 180w,
+                        ../dist/images/advice5-original.jpg" class="img-fluid lazyload " alt="..." data-sizes="auto">
                     <div class="card-body">
                         <p style="text-align: center;margin-top: 10px;font-weight: bold;" class="card-title">马卡龙</p>
                     </div>
@@ -116,25 +178,32 @@
             </div>
             <div class="col-6 col-sm-6 col-md-3 col-lg-3">
                 <div class="card">
-                    <img src="../image/advice6.jpg" alt="" class="food-img">
-                    <div class="card-body"">
-                    <p style=" text-align: center;margin-top: 10px;font-weight: bold;" class="card-title">草莓甜心</p>
+                    <img src="../dist/images/advice9-original.jpg" data-original="../dist/images/advice7-90.jpg"
+                        data-srcset="   ../dist/images/advice9-90.jpg 90w,
+                        ../dist/images/advice9-180.jpg 180w,
+                        ../dist/images/advice9-original.jpg" class="img-fluid lazyload" alt="..." data-sizes="auto">
+                    <div class="card-body">
+                        <p style="text-align: center;margin-top: 10px;font-weight: bold;" class="card-title">雪媚娘</p>
                     </div>
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-3 col-lg-3">
                 <div class="card">
-                    <img src="../image/advice7.jpg" alt="" class="food-img">
+                    <img src="../dist/images/advice6-540.jpg" data-original="../dist/images/advice6-90.jpg" data-srcset=" ../dist/images/advice6-90.jpg 90w,
+                        ../dist/images/advice6-180.jpg 180w,
+                        ../dist/images/advice6-original.jpg" class="img-fluid lazyload" alt="..." data-sizes="auto">
                     <div class="card-body">
-                        <p style="text-align: center;margin-top: 10px;font-weight: bold;" class="card-title">芝士糕点</p>
+                        <p style=" text-align: center;margin-top: 10px;font-weight: bold;" class="card-title">草莓甜心</p>
                     </div>
                 </div>
             </div>
             <div class="col-6 col-sm-6 col-md-3 col-lg-3">
                 <div class="card">
-                    <img src="../image/advice8.jpg" alt="" class="food-img">
+                    <img src="../dist/images/advice8-540.jpg" data-original="../dist/images/advice8-90.jpg" data-srcset="../dist/images/advice8-90.jpg 90w,
+                        ../dist/images/advice8-180.jpg 180w,
+                    ../dist/images/advice8-original.jpg" class="img-fluid lazyload" alt="..." data-sizes="auto">
                     <div class="card-body">
-                        <p style="text-align: center;margin-top: 10px;font-weight: bold;" class="card-title">黑森林</p>
+                        <p style="text-align: center;margin-top: 10px;font-weight: bold;" class="card-title">钵仔糕</p>
                     </div>
                 </div>
             </div>
@@ -142,76 +211,139 @@
     </div>
     <h3 style="text-align: center;margin: 15px;">产品优势</h3>
     <div class="container">
-        <div class="row">
-            <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+        <div class="row text-center">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
                 <span class="iconfont iconyouhui"></span>
                 价格美丽
             </div>
-            <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
                 <span class="iconfont iconbaokuan"></span>
                 超多爆款
             </div>
-            <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
                 <span class="iconfont iconnaicha1"></span>
                 口味纯正
             </div>
         </div>
-        <div class="row">
-            <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+        <div class="row text-center">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
                 <span class="iconfont iconxiangmutuandui"></span>
                 专业团队
             </div>
-            <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
                 <span class="iconfont iconpinpai"></span>
                 品牌悠久
             </div>
-            <div class="col-6 col-sm-6 col-md-3 col-lg-3">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4">
                 <span class="iconfont iconfuwu1"></span>
                 服务周到
             </div>
         </div>
     </div>
     <!-- 底部内容 -->
-    <div class="container mt-5 pt-2 foot">
-        <div class="row">
-            <div class="col-4 col-sm-2 col-md-2 col-lg-2 connect">
-                <h5><span class="iconfont icondianhua"></span>联系我们</h5>
-                <ul class="connectDetail list-inline mt-2">
+    <div class="container-fluid footer">
+        <div class="row text-center">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 connect">
+                <h6><span class="iconfont icondianhua"></span>联系我们</h6>
+                <ul class="connectDetail">
                     <li class="iconfont  icondizhi">&nbsp;福州市闽侯县上街镇中海寰宇</li>
                     <li class="iconfont iconyouxiang">&nbsp;hututu@qq.com</li>
                     <li class="iconfont icondianhua">&nbsp;400-123-4569</li>
                 </ul>
             </div>
             <div class="col-4 col-sm-2 col-md-2 col-lg-2 saoma">
-                <h5><span class="iconfont iconsaoma"></span>扫码进店</h5>
+                <h6><span class="iconfont iconsaoma"></span>扫码进店</h6>
                 <span>
                     <img src="../image/saoma.png" alt="" class="scan" id="scanImg">
-                    <p style="width:80px;text-align: center;margin-top: 10px;">奶茶加点甜</p>
+                    <!-- <p style="width:80px;text-align: center;margin-top: 10px;">奶茶加点甜</p> -->
                 </span>
-                <p>版权所有@hututu</p>
             </div>
             <div class="col-4 col-sm-2 col-md-2 col-lg-2 notice">
-                <h5><span class="iconfont iconguanzhu1"></span>关注我们</h5>
-                <ul class="foot-subscript list-inline mt-2">
+                <h6><span class="iconfont iconguanzhu1"></span>关注我们</h6>
+                <ul class="foot-subscript list-inline">
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                 </ul><br>
             </div>
-            <div class="col-4 col-sm-2 col-md-2 col-lg-2 notice">
-                <h5><span class="iconfont iconguanzhu1"></span>联系我们</h5>
-                <ul class="foot-subscript">
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                </ul><br>
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 notice" data-toggle="modal" data-target="#exampleModal">
+                <h6><span class="iconfont iconfankui1"></span>意见反馈</h6>
+                <span class="iconfont iconfankui"></span>
+                <h6>点击反馈</h6>
+            </div>
+            <div style="width: 100%;border-top: 2px solid whitesmoke;margin: 30px auto;">
+                <p style="margin:10px auto">版权所有@胡图图</p>
+            </div>
+        </div>
+    </div>
+    <!-- 反馈 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">您的评价是对我们最大的支持</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">邮箱:</label>
+                            <input type="text" class="form-control" id="recipient-name" placeholder="email input">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">反馈信息:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="alert">发送</button>
+                </div>
             </div>
         </div>
     </div>
 </body>
 <script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        function loadJS(u) {
+            var r = document.getElementsByTagName("script")[0],
+                s = document.createElement("script");
+            s.src = u;
+            r.parentNode.insertBefore(s, r);
+        }
+        if (!window.HTMLPictureElement) {
+            loadJS("js/ls.respimg.min.js");
+        }
+
+        //收到反馈
+        var send = $('#alert')
+        send.click(function () {
+            $('.modal-body').html('')
+            $('.modal-body').html('<p  class="pheight">您的问题和建议已收到，我们会认真处理您的反馈，工作日在24小时内会给您答复，感谢您的使用！</p>')
+            const timer = setTimeout(() => {
+                console.log("jsjs")
+                $('#exampleModal').modal('hide')
+                $('.modal-body').html(`<div class="modal-body">
+                                      <form>
+                                        <div class="form-group">
+                                          <label for="recipient-name" class="col-form-label">邮箱:</label>
+                                          <input type="text" class="form-control" id="recipient-name" placeholder="email input">
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="message-text" class="col-form-label">反馈信息:</label>
+                                          <textarea class="form-control" id="message-text"></textarea>
+                                        </div>
+                                      </form>
+                                    </div>`)
+            }, 1000);
+        })
+
+    })
+</script>
+<script src="https://afarkas.github.io/lazysizes/plugins/bgset/ls.bgset.min.js"></script>
+<script src="../js/lazysizes.min.js" async></script>
 
 </html>

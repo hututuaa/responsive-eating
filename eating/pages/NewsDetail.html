@@ -8,88 +8,125 @@
     <link rel="stylesheet" href="../css/newsDetail.css">
     <link rel="stylesheet" href="../font/iconfont.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/common.css">
 </head>
 
 <body>
     <!-- 头部 -->
-    <div class="header">
-        <div class="header-content">
-            <div>
-                <span class="iconfont iconnaichabeizi"></span>
-                <span class="title">奶茶加点糖</span>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="./Home.html">首页</a></li>
-                    <li><a href="./News.html">新闻</a></li>
-                    <li><a href="./About.html">关于我们</a></li>
-                </ul>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;" id="top">
+        <a class="navbar-brand iconfont icon-food d-block text-success logosize" href="index.html"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item ">
+                    <a class="nav-link" href="./Home.html">首页</a>
+                </li>
+                <li class="nav-item active-title">
+                    <a class="nav-link " href="./News.html">新闻</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./About.html">关于我们</a>
+                </li>
+            </ul>
         </div>
-
-    </div>
+    </nav>
     <div class="returnLogo">
         <span class="iconfont iconNMStubiao-"></span>
     </div>
     <!-- 内容 -->
-    <div class="detail">
-        <div id="detailContent">
-            <h2></h2>
-            <h3></h3>
-            <img src="" alt="" class="foodImg">
-            <p style="padding: 10px;"></p>
-            <p></p>
+    <div class="container">
+        <div class="row ">
+            <div class="col text-center">
+                <h2 class="h2" id="title"></h2>
+                <div class="des-date" id="update"></div>
+                <p id="foodimg"></p>
+                <!--<div class="food-img"></div>-->
+                <p id="dest" class="lead text-left"></p>
+            </div>
         </div>
     </div>
-
     <!-- 底部 -->
-    <div class="footer">
-        <div class="footerContent">
-            <div class="connect">
-                <h4><span class="iconfont icondianhua"></span>联系我们</h4>
+    <div class="container-fluid footer">
+        <div class="row text-center">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 mb-3 connect">
+                <h6><span class="iconfont icondianhua"></span>联系我们</h6>
                 <ul class="connectDetail">
-                    <li class="iconfont icondizhi">&nbsp;福州市闽侯县上街镇中海寰宇</li>
+                    <li class="iconfont  icondizhi">&nbsp;福州市闽侯县上街镇中海寰宇</li>
                     <li class="iconfont iconyouxiang">&nbsp;hututu@qq.com</li>
                     <li class="iconfont icondianhua">&nbsp;400-123-4569</li>
                 </ul>
             </div>
-            <div class="saoma">
-                <h4><span class="iconfont iconsaoma"></span>扫码进店</h4>
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 saoma">
+                <h6><span class="iconfont iconsaoma"></span>扫码进店</h6>
                 <span>
                     <img src="../image/saoma.png" alt="" class="scan" id="scanImg">
-                    <p style="width:80px;text-align: center;margin-top: 10px;">奶茶加点糖</p>
+                    <!-- <p style="width:80px;text-align: center;margin-top: 10px;">奶茶加点甜</p> -->
                 </span>
-
             </div>
-            <div class="notice">
-                <h4><span class="iconfont iconguanzhu1"></span>关注我们</h4>
-                <ul class="foot-subscript">
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 notice">
+                <h6><span class="iconfont iconguanzhu1"></span>关注我们</h6>
+                <ul class="foot-subscript list-inline">
                     <li><a href="#"></a></li>
-                    <li><a href="#" id="wx"></a></li>
+                    <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                 </ul><br>
+            </div>
+            <div class="col-4 col-sm-2 col-md-2 col-lg-2 notice" data-toggle="modal" data-target="#exampleModal">
+                <h6><span class="iconfont iconfankui1"></span>意见反馈</h6>
+                <span class="iconfont iconfankui"></span>
+                <h6>点击反馈</h6>
+            </div>
+            <div style="width: 100%;border-top: 2px solid whitesmoke;margin: 30px auto;">
+                <p style="margin:10px auto">版权所有@胡图图</p>
+            </div>
+        </div>
+    </div>
+    <!-- 反馈 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">您的评价是对我们最大的支持</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">邮箱:</label>
+                            <input type="text" class="form-control" id="recipient-name" placeholder="email input">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">反馈信息:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="alert">发送</button>
+                </div>
             </div>
         </div>
     </div>
 </body>
 <script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+<script src="../js/axios.min.js"></script>
 <script>
     $(function () {
         var id = parseInt(location.search.split('=')[1]);
         console.log(id);
         axios.get('https://mock-api.com/Gzq27OgW.mock/list')
             .then(function (res) {
-                var resData = res.data[id];
-                console.log(resData)
-                $('#detailContent h2').html(resData.title);
-                // $('#detailContent h3').html(`￥${resData.price}`);
-                $('.foodImg').prop('src', resData.img);
-                $('#detailContent p').eq(0).html(resData.description);
-                $('#detailContent p').eq(1).html(`发布时间:${resData.date}`);
-
-
+                var a=res.data[id];
+                // console.log(res.data.length-1)
+                $('#title').html(a.title);
+                $('#update').html("发布时间："+a.date);
+                $("#foodimg").html(`<img src="./images/loading.jpg"  data-original="${a.img}" data-srcset="${a.imgs}" class="img-fluid lazyload newssize" data-sizes="auto" alt="...">`)
+                $('#dest').html(a.description);
 
             }).catch(function (res) {
                 console.log('error', res);
@@ -105,5 +142,6 @@
     })
 </script>
 </script>
-
+<script src="https://afarkas.github.io/lazysizes/plugins/bgset/ls.bgset.min.js"></script>
+<script src="../js/lazysizes.min.js" async></script>
 </html>

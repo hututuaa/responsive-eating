@@ -7,18 +7,13 @@ body, html {
 
 .header {
     width: 100%;
-    /* height: 100px; */
     background-color: #ddd;
 }
 
-.header-content {
-    width: 1200px;
-    display: flex;
-    margin: 0 auto;
-    height: 100px;
-    justify-content: space-between;
+.active-title {
+    font-weight: bold;
+    background-color: peru;
 }
-
 ul li {
     list-style: none;
 }
@@ -33,22 +28,6 @@ ul li {
     font-size: 20px;
     margin-left: 20px;
 }
-
-li a {
-    text-decoration: none;
-    color: #222;
-    cursor: pointer;
-}
-
-.header .title {
-    font-size: 30px;
-    font-family: KaiTi;
-}
-
-li a:hover {
-    color: #ccc;
-}
-
 .iconfont.iconnaichabeizi {
     font-size: 60px;
     line-height: 100px;
@@ -94,17 +73,6 @@ li a:hover {
     padding-top: 20px;
 }
 
-.footer .footerContent {
-    width: 1200px;
-    margin: 0 auto;
-    height: 200px;
-    display: flex;
-    justify-content: space-between;
-}
-.footerContent  ul  {
-    padding: 0;
- }
- 
 .connect h4, .saoma h4, .notice h4 {
     text-align: center;
     color: #222;
@@ -126,11 +94,6 @@ li a:hover {
     margin: 0 auto;
     text-align: center;
 }
-
-/* .foodImg {
-    width: 400px;
-    height: 400px;
-} */
 .returnLogo{
     position: relative;
     left:50px
