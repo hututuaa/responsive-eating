@@ -44,7 +44,8 @@
                     <div class="fixHeight"></div>
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
-                        <a href="#" class="btn btn-primary btn-sm">查看详情</a>
+                        <!-- <a href="#" class="btn btn-primary btn-sm">点击查看</a> -->
+                        <button type="button" class="btn btn-outline-info">点我</button>
                     </div>
                 </div>
             </div>
@@ -53,7 +54,8 @@
                     <div class="fixHeight"></div>
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
-                        <a href="#" class="btn btn-primary btn-sm">查看详情</a>
+                        <!-- <a href="#" class="btn btn-primary btn-sm">点击查看</a> -->
+                         <button type="button" class="btn btn-outline-info">点我</button>
                     </div>
                 </div>
             </div>
@@ -62,7 +64,8 @@
                     <div class="fixHeight"></div>
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
-                        <a href="#" class="btn btn-primary btn-sm">查看详情</a>
+                        <!-- <a href="#" class="btn btn-primary btn-sm">点击查看</a> -->
+                        <button type="button" class="btn btn-outline-info">点我</button>
                     </div>
                 </div>
             </div>
@@ -71,7 +74,8 @@
                     <div class="fixHeight"></div>
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
-                        <a href="#" class="btn btn-primary btn-sm">查看详情</a>
+                        <!-- <a href="#" class="btn btn-primary btn-sm">点击查看</a> -->
+                        <button type="button" class="btn btn-outline-info">点我</button>
                     </div>
                 </div>
             </div>
@@ -80,7 +84,8 @@
                     <div class="fixHeight"></div>
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
-                        <a href="#" class="btn btn-primary btn-sm">查看详情</a>
+                        <!-- <a href="#" class="btn btn-primary btn-sm">点击查看</a> -->
+                        <button type="button" class="btn btn-outline-info">点我</button>
                     </div>
                 </div>
             </div>
@@ -89,7 +94,8 @@
                     <div class="fixHeight"></div>
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
-                        <a href="#" class="btn btn-primary btn-sm">查看详情</a>
+                        <!-- <a href="#" class="btn btn-primary btn-sm">点击查看</a> -->
+                        <button type="button" class="btn btn-outline-info">点我</button>
                     </div>
                 </div>
             </div>
@@ -210,7 +216,8 @@
                     $.each(now, function (index, ele) {
                         $('.card').eq(index).find('.fixHeight').html(`<img src="./images/loading.jpg"  data-original="${ele.img}" data-srcset="${ele.imgs}" class="card-img-top img-fluid lazyload" data-sizes="auto" alt="...">`)
                         $('.card-title').eq(index).html(ele.title)
-                        $('.card-body').eq(index).find('a').prop('href', `NewsDetail.html?id=${ele.id}`);
+                        // $('.card-body').eq(index).find('a').prop('href', `NewsDetail.html?id=${ele.id}`);
+                        $('.card-body').eq(index).find('button').click(function(){window.location.href =`NewsDetail.html?id=${ele.id}`})
                     })
                     // 进度条
                     NProgress.done();

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../font/iconfont.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css" />
 </head>
 
 <body>
@@ -39,13 +40,22 @@
     </div>
     <!-- 内容 -->
     <main>
+        <div class="box">
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+        </div>
+        <div id="box">
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+        </div>
         <div class="container">
             <div class="row ">
                 <div class="col text-center">
                     <h2 class="h2" id="title"></h2>
                     <div class="des-date" id="update"></div>
                     <p id="foodimg"></p>
-                    <!--<div class="food-img"></div>-->
                     <p id="dest" class="lead text-left"></p>
                 </div>
             </div>
@@ -55,12 +65,13 @@
     <footer class="footer container-fluid">
         <div class="row">
             <div class="col-12 col-sm-6 col-md-6 col-lg-6 connect">
-                <h6 style="text-align: center;font-size: 20px;"><span class="iconfont icondianhua"></span>&nbsp;联系我们</h6>
+                <h6 style="text-align: center;font-size: 20px;"><span class="iconfont icondianhua"></span>&nbsp;联系我们
+                </h6>
                 <ul class="connectDetail">
                     <li class="iconfont  icondizhi"><span>&nbsp;福州市闽侯县上街镇中海寰宇</span></li>
                     <li class="iconfont iconyouxiang"><span>&nbsp;hututu@qq.com</span></li>
                     <li class="iconfont icondianhua"><span>&nbsp;400-123-4569</span></li>
-                </ul> 
+                </ul>
             </div>
             <div class="col-4 col-sm-2 col-md-2 col-lg-2 saoma">
                 <h6 style="font-size: 20px;"><span class="iconfont iconsaoma"></span>&nbsp;扫码进店</h6>
@@ -80,7 +91,7 @@
             <div class="col-4 col-sm-2 col-md-2 col-lg-2 notice" data-toggle="modal" data-target="#exampleModal">
                 <h6 style="font-size: 20px;"><span class="iconfont iconfankui1"></span>&nbsp;意见反馈</h6>
                 <span class="iconfont iconfankui"></span>&nbsp;点击反馈
-               
+
             </div>
         </div>
         <div style="width:100%;border-top: 2px solid whitesmoke;margin: 30px auto;" class="row text-center">
@@ -115,33 +126,32 @@
 <script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/axios.min.js"></script>
+<script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
 <script>
     $(function () {
         var id = parseInt(location.search.split('=')[1]);
-        console.log(id);
+        // $(".box").css('display','block')
+        NProgress.start();
         axios.get('https://mock-api.com/Gzq27OgW.mock/list')
             .then(function (res) {
                 var a = res.data[id];
-                // console.log(res.data.length-1)
                 $('#title').html(a.title);
-                $('#update').html("发布时间：" + a.date);
+                $('#update').html("发布时间：" + a.date + ' ' + "发布者：xxn");
                 $("#foodimg").html(`<img src="./images/loading.jpg"  data-original="${a.img}" data-srcset="${a.imgs}" class="img-fluid lazyload newssize" data-sizes="auto" alt="...">`)
                 $('#dest').html(a.description);
-
+                // $(".box").css('display','none')
+                NProgress.done();
             }).catch(function (res) {
                 console.log('error', res);
-
+                NProgress.done();
             })
         // 返回上一个页面
-        function returnNews() {
-            window.history.go(-1)
-        }
         $('.returnLogo').click(function () {
-            returnNews()
+            window.history.go(-1)
         })
 
-           //收到反馈
-           var send = $('#alert')
+        //收到反馈
+        var send = $('#alert')
         send.click(function () {
             $('.modal-body').html('')
             $('.modal-body').html('<p  class="pheight">您的反馈信息已收到，我们将真诚为您服务。关于您的评价和建议，我们会尽快处理，请您耐心等候！</p>')
